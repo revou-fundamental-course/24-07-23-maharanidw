@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Travel Agentku</title>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header id="header">
+        <!-- Navigation -->
+        <section id="headerNavigation">
+            <a class="logo" href="">MD Travel</a>
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#package">Our Package</a>
+                <a href="#contact">Call Us</a>
+            </nav>
+        </section>
+        <!-- Title -->
+        <section id="headerTitle">
+            <h1>Your Trusted Travel's Agent</h1>
+            <h3 id="subtitle">Your happiness is our happiness</h3>
+        </section>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+        <!-- Home -->
+        <section id="home">
+            <article id="article">
+                <div class="imgslide fade">
+                    <div class="numberslide">1 / 3</div>
+                    <img src="assets/1.jpg" alt="">
+                    <div class="text">Pemandangan</div>
+                </div>
+    
+                <div class="imgslide fade">
+                    <div class="numberslide">2 / 3</div>
+                    <img src="assets/2.jpg" alt="">
+                    <div class="text">Jembatan</div>
+                </div>
+    
+                <div class="imgslide fade">
+                    <div class="numberslide">3 / 3</div>
+                    <img src="assets/3.jpg" alt="">
+                    <div class="text">Jerapah</div>
+                </div>
+    
+                <a class="prev" onClick="nextslide(-1)">&#10094;</a>
+                <a class="next" onClick="nextslide(1)">&#10095;</a> 
+            </div>
+    
+            <div class="page">
+                <span class="dot" onClick="dotslide(1)"></span>
+                <span class="dot" onClick="dotslide(2)"></span>
+                <span class="dot" onClick="dotslide(3)"></span>
+            </div>
+            <script>
+                var slideIndex = 1;
+    showSlide(slideIndex);
+
+function nextslide(n){
+    showSlide(slideIndex += n);
+}
+
+function dotslide(n){
+    showSlide(slideIndex = n);
+}
+
+function showSlide(n) {
+    var i;
+    var slides = document.getElementsByClassName("imgslide");
+    var dot = document.getElementsByClassName("dot");
+    
+    if (n > slides.length) {
+        slideIndex = 1
+    }
+    if (n < 1) {
+        slideIndex = slides.length;
+    }
+    for (i = 0; i < slides.length; i++) {
+        
+        slides[i].style.display = "none";
+    }
+
+    for (i = 0; i < slides.length; i++) {
+        
+        dot[i].className = dot[i].className.replace(" active", "");
+    }
+
+    slides[slideIndex - 1].style.display = "block";
+
+    dot[slideIndex - 1].className += " active";
+}
+            </script>
+                <h5><i>Liburan jadi menyenangkan bersama Travel Agentku</i></h5>
+            </article>
+            <section id="kontak">
+                <h3 class="titleSubtitle">Contact Us</h3>
+                <h6 class="titleSubtitle">Sales akan menghubungi anda dalam 1x24 jam setelah data kami terima</h6>
+                <form action="" id="form" onsubmit="return validateForm()">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" placeholder="First and last name"> <br>
+                
+                    <label for="email">Email Address:</label>
+                    <input type="text" id="email" name="email" placeholder="example@email.com"><br>
+                
+                    <label for="interest">What are you interested in?</label>
+                    <select id="interest" name="interest">
+                        <option value="">Select option</option>
+                        <option value="asia">Asia</option>
+                        <option value="amerika">Amerika</option>
+                        <option value="eropa">Eropa</option>
+                        <option value="lain">Lainnya</option>
+                    </select><br>
+                
+                    <input type="submit" id="submit" value="Send">
+                </form>
+            </section>
+        </section>
+        <!-- Our Package -->
+        <section id="package">
+            <div id="packageTitle">
+                <h1>Our Package</h1>
+            </div>
+            <div class="grid-container">
+                <div>
+
+                </div>
+                <div>2</div>
+                <div>3</div>  
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>  
+              </div>
+        </section>
+        <!-- Call Us -->
+        <section id="contact">
+            <div>
+                <h1 id="join">Accomplish Your Dream With Us!</h1>
+                <p>Every single bucket lisT you</p>
+                <a href="#" class="btn">LIBURAN SEKARANG</a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
