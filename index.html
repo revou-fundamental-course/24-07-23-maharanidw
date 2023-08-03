@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/56e205c841.js" crossorigin="anonymous"></script>
     <title>Travel Agentku</title>
 </head>
 <body>
@@ -31,48 +31,58 @@
     <main>
         <!-- Home -->
         <section id="home">
-            <article id="article">
-                <!-- slider -->
-                <!--image slider start-->
-    <div class="slider">
-        <div class="slides">
-          <!--radio buttons start-->
-          <input type="radio" name="radio-btn" id="radio1">
-          <input type="radio" name="radio-btn" id="radio2">
-          <input type="radio" name="radio-btn" id="radio3">
-          <input type="radio" name="radio-btn" id="radio4">
-          <!--radio buttons end-->
-          <!--slide images start-->
-          <div class="slide first">
-            <img src="assets/1.jpg" alt="">
-          </div>
-          <div class="slide">
-            <img src="assets/2.jpg" alt="">
-          </div>
-          <div class="slide">
-            <img src="assets/3.jpg" alt="">
-          </div>
-          <!--slide images end-->
-      </div>
-      <!--image slider end-->
-                    <script type="text/javascript">
-                        var counter = 1;
-                        setInterval(function(){
-                          document.getElementById('radio' + counter).checked = true;
-                          counter++;
-                          if(counter > 4){
-                            counter = 1;
-                          }
-                        }, 5000);
-                        </script>
-                    
-                    <div style="text-align:center">
-                      <span class="dot"></span> 
-                      <span class="dot"></span> 
-                      <span class="dot"></span> 
+                <section>
+                      <!--image slider start-->
+                    <div class="slider">
+                        <div class="slides">
+                        <!--radio buttons start-->
+                        <input type="radio" name="radio-btn" id="radio1">
+                        <input type="radio" name="radio-btn" id="radio2">
+                        <input type="radio" name="radio-btn" id="radio3">
+                        <!--radio buttons end-->
+                        <!--slide images start-->
+                        <div class="slide first">
+                            <img src="assets/1.jpg" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="assets/2.jpg" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="assets/3.jpg" alt="">
+                        </div>
+                        <!--slide images end-->
+                        <!--automatic navigation start-->
+                        <div class="navigation-auto">
+                            <div class="auto-btn1"></div>
+                            <div class="auto-btn2"></div>
+                            <div class="auto-btn3"></div>
+                        </div>
+                        <!--automatic navigation end-->
+                        </div>
+                        <!--manual navigation start-->
+                        <div class="navigation-manual">
+                        <label for="radio1" class="manual-btn"></label>
+                        <label for="radio2" class="manual-btn"></label>
+                        <label for="radio3" class="manual-btn"></label>
+                        </div>
+                        <!--manual navigation end-->
                     </div>
-                <h5><i>Liburan jadi menyenangkan bersama Travel Agentku</i></h5>
-            </article>
+                    <!--image slider end-->
+                
+                    <script type="text/javascript">
+                    var counter = 1;
+                    setInterval(function(){
+                        document.getElementById('radio' + counter).checked = true;
+                        counter++;
+                        if(counter > 3){
+                        counter = 1;
+                        }
+                    }, 5000);
+                    </script>
+                <article id="article">
+                    <h5><i>Liburan jadi menyenangkan bersama Travel Agentku</i></h5>
+                </article>
+                </section>
             <!-- contact us -->
             <section id="kontak">
                 <h3 class="titleSubtitle">Contact Us</h3>
@@ -80,29 +90,37 @@
                 <form action="" id="form">
                     <div>
                         <label for="name">Your Name:</label>
+                        <i class="fas fa-user"></i>
+
                         <input type="text" id="name" name="name" placeholder="First and last name">
 
                         <i class="fas fa-exclamation-circle failure-icon"></i>
                         <i class="far fa-check-circle success-icon"></i>
     
                         <div class="error"></div>
-
                     </div>
-                    
-                
-                    <label for="email">Email Address:</label>
-                    <input type="text" id="email" name="email" placeholder="example@email.com"><br>
-                
-                    <label for="interest">What are you interested in?</label>
-                    <select id="interest" name="interest">
-                        <option value="">Select option</option>
-                        <option value="asia">Asia</option>
-                        <option value="amerika">Amerika</option>
-                        <option value="eropa">Eropa</option>
-                        <option value="lain">Lainnya</option>
-                    </select><br>
-                
-                    <input type="submit" id="submit" value="Send">
+                    <div>
+                        <label for="email">Email Address:</label>
+                        <i class="far fa-envelope"></i>
+
+                        <input type="text" id="email" name="email" placeholder="example@email.com">
+
+                        <i class="fas fa-exclamation-circle failure-icon"></i>
+                        <i class="far fa-check-circle success-icon"></i>
+    
+                        <div class="error"></div>
+                    </div>
+                    <div>
+                        <label for="interest">What are you interested in?</label>
+                        <select id="interest" name="interest">
+                            <option value="">Select option</option>
+                            <option value="asia">Asia</option>
+                            <option value="amerika">Amerika</option>
+                            <option value="eropa">Eropa</option>
+                            <option value="lain">Lainnya</option>
+                        </select>
+                    </div>   
+                    <button id="btn">Send</button>
                 </form>
             </section>
         </section>
@@ -133,6 +151,5 @@
     </main>
 </body>
 <footer>
-
 </footer>
 </html>
