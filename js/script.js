@@ -6,7 +6,7 @@ let classes = (classes) => document.getElementsByClassName(classes)
 
 let username = id("username"),
   email = id("email"),
-  password = id("interest"),
+  interest = id("interest"),
   form = id("form"),
   
   errorMsg = classes("error"),
